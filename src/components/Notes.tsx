@@ -1,6 +1,6 @@
 "use client";
 
-// import { Button } from "@/components/ui/button";
+import { Label } from "@radix-ui/react-label";
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 import {
@@ -11,12 +11,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../components/ui/dialog"; // ✅ from shadcn
+} from "../components/ui/dialog";
 import { Input } from "../components/ui/input";
-// import { Label } from "../components/ui/label";
-// If you have a Label component elsewhere, update the path accordingly, e.g.:
-import { Label } from "@radix-ui/react-label";
-// Or use a simple label element in the JSX if you don't have a Label component
 
 import initialData from "../data/notes";
 import Note from "./Note";
@@ -97,7 +93,7 @@ const Notes = () => {
             id={note.id}
             name={note.name}
             thoughts={note.thoughts}
-            date={new Date(note.updated).toLocaleString()}
+            date={new Date(note.updated).toLocaleString()} // ✅ now `string`
           />
         </div>
       ))}

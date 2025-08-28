@@ -2,7 +2,7 @@ type PropsType = {
   id: number;
   name: string;
   thoughts: string;
-  date: number;
+  date: string; // ✅ now matches
 };
 
 const Note = ({ id, name, thoughts, date }: PropsType) => {
@@ -11,7 +11,7 @@ const Note = ({ id, name, thoughts, date }: PropsType) => {
       <h2 className="text-xl font-semibold text-gray-800">{name}</h2>
       <p className="text-gray-600">{thoughts}</p>
       <small className="text-gray-400">
-        ID: {id} | Updated: {new Date(date).toLocaleString()}
+        ID: {id} | Updated: {date}
       </small>
     </div>
   );
