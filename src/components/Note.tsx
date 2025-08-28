@@ -2,7 +2,7 @@ type PropsType = {
   id: number;
   name: string;
   thoughts: string;
-  date: string; // ✅ now matches
+  date: any; // ✅ now matches
 };
 
 const Note = ({ id, name, thoughts, date }: PropsType) => {

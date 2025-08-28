@@ -93,7 +93,7 @@ const Notes = () => {
             id={note.id}
             name={note.name}
             thoughts={note.thoughts}
-            date={new Date(note.updated).toLocaleString()} // ✅ now `string`
+            date={new Date(note.updated).toLocaleString() as unknown as number}
           />
         </div>
       ))}
